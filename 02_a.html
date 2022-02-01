@@ -5,29 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-       <style>
-          section{
-              max-width: 1000px;
-              display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-              gap:10%;
-          }
-          *{
-              padding: 0;
-              margin: 0;
-          }
-          
-      </style>
+    <style>
+      section {
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 10px;
+        margin: 0 auto 20px;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      header,
+      footer,
+      article {
+        border: solid black 2px;
+      }
+      header,
+      footer,
+      h1 {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>Titel</h1>
-   
     </header>
     <main>
-         <h2> underoverskrift</h2>
+      <h2>underoverskrift</h2>
       <section id="section_1">
-       
         <article class="a_1">
           <img src="gyldne.jpg" alt=" det gyldne snit" />
           <p>
@@ -48,6 +56,28 @@
         </article>
       </section>
     </main>
-    <footer> this is a footer</footer>
+    <footer>this is a footer</footer>
+      <script>
+      const headtitle = document.querySelector("header h1");
+      console.log(headtitle);
+
+      const title = document.querySelector("main h2");
+      console.log(title);
+
+      const a_1 = document.querySelector("article:nth-child(1) img");
+      console.log(a_1);
+
+      const a_2 = document.querySelector("article:nth-child(2) img");
+      console.log(a_2);
+
+      const p1 = document.querySelector("#p1");
+      console.log(p1);
+
+      const p2 = document.querySelector("#p2");
+      console.log(p2);
+
+      const footer = document.querySelector("footer");
+      console.log(footer);
+    </script>
   </body>
 </html>
