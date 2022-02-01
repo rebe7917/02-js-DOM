@@ -24,7 +24,10 @@
       }
       header,
       footer,
-      h1 {
+      h1,
+      h2,
+      h3,
+      p {
         text-align: center;
       }
     </style>
@@ -60,6 +63,10 @@
     </main>
     <footer>footer</footer>
     <script>
+        document.addEventListener("DOMContentLoaded", start);
+      function start(){
+          console.log("DOMContentLoaded")
+      //udvælg dom elementer
       const headtitle = document.querySelector("header h1");
       console.log(headtitle);
 
@@ -86,16 +93,35 @@
       const footer = document.querySelector("footer");
       console.log(footer);
 
+      const section = document.querySelector("#section_1");
+      console.log(section);
+
       const pic = document.querySelector("#img1");
       console.log(pic);
-
+      // udskift tekstinhold i elementer
       p1.textContent = "Hvad så fessor?";
       p2.textContent = "U Up?";
       aa.textContent = "hej med dig";
       ab.textContent = "goddag";
+      // udskift billeder
+      pic.src = "moodboard_p.jpg";
 
-      pic.src =   "moodboard_p.jpg";
-     
+      //tilføj nyt element
+      const newArticle = document.createElement("article");
+      const newImage = document.createElement("img");
+      const newH3 = document.createElement("h3");
+      const newP = document.createElement("p");
+      section.appendChild(newArticle);
+      newArticle.appendChild(newImage);
+      newArticle.appendChild(newH3);
+      newArticle.appendChild(newP);
+      newImage.src = "gyldne.jpg";
+      newH3.textContent = "whats up";
+      newP.textContent = "hvad skal du i dag?";
+
+      
+
+      }
     </script>
   </body>
 </html>
